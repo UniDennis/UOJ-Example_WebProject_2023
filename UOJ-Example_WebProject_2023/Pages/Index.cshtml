@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">UniObjects Test Page</h1>
+</div>
+
+<div class="align-text-top">
+    <p> 
+        @Model.GetMessage()
+    </p>
+</div>
+
+<div class="align-top">
+    <p>Enter a TCL query:<br />
+        For Example:    COUNT VOC
+    </p>
+
+    <form method="post">
+        Query:
+        <input type="text" value="LISTU" name="myQuery" />
+        <input type="submit" />
+    </form>
+
+    <p>
+	@{
+		var qResult = "";
+		if (@Model.GetQueryResponse() != "")
+		{
+			qResult = Model.GetQueryResponse();
+		}
+	}
+        Response:  <br /><br />
+
+            @Html.Raw(qResult)
+    </p>
+</div>

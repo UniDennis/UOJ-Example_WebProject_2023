@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>UOJ_Example_WebProject_2023</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="__web.config__" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="__web.config__" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="UODOTNET">
+      <HintPath>..\..\..\..\..\..\Program Files\U2\UniDK\uonet\bin\UODOTNET.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+
+</Project>
