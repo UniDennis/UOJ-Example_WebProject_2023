@@ -20,6 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="jremote">
+      <HintPath>..\..\..\..\..\..\Program Files\U2\UniDK\uonet\bin\jremote.dll</HintPath>
+    </Reference>
     <Reference Include="UODOTNET">
       <HintPath>..\..\..\..\..\..\Program Files\U2\UniDK\uonet\bin\UODOTNET.dll</HintPath>
       <Private>True</Private>

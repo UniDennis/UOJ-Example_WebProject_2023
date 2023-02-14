@@ -1,4 +1,5 @@
-﻿using IBMU2.UODOTNET;
+﻿using com.jbase.jremote;
+using IBMU2.UODOTNET;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -7,31 +8,25 @@ namespace UOJ_Example_WebProject_2023.Pages
 {
     public class IndexModel : PageModel
     {
-        //private readonly ILogger<IndexModel>? _logger;
-
-        //public IndexModel(ILogger<IndexModel> logger) => _logger = logger;
-
 
         private string strMessage = "";
         private string strResponse = "";
 
 		private readonly UOJUniware ee = new();
         private UniSession? uniSession;
-
+        //private readonly jrcsUniware jj = new();
+        //private JConnection? jSession;
 
         public IndexModel() 
         {
             uniSession = ee.pSession;
+            //jSession = jj.pSession;
         }
 
         public string Message<T>()
         { return strMessage; }
 
         public void SetMessage(string message) { strMessage = message; }
-
-        //public UniSession UniSession { get => uniSession; }
-
-
 
         public void OnGet()
         {
